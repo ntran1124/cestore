@@ -14,4 +14,8 @@ class Department extends Model
     public function getNameAttribute($value) {
         return strtoupper($value);
     }
+
+    public function Categories() {
+        return $this->hasMany('App\Models\Category');
+    }
 }

@@ -4,7 +4,7 @@
     @include('partials.errors')
     <div class="row">
         <div class="col-md-12">
-            <form action="{{ route('departments.create') }}" method="post">
+            <form action="{{ route('departments.createDepartment') }}" method="post">
                 <div class="form-group">
                     <label for="name" class="col-md-2">Name</label>
                     <div class="col-md-10">

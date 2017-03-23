@@ -42,7 +42,7 @@ Route::group(['prefix' => 'departments'], function() {
 
     Route::post('create', [
         'uses' => 'DepartmentsController@postCreate',
-        'as' => 'departments.create'
+        'as' => 'departments.createDepartment'
     ])->middleware('auth');
 
     Route::get('update/{id}', [
@@ -84,7 +84,7 @@ Route::group(['prefix' => 'categories'], function() {
 
     Route::post('create', [
         'uses' => 'CategoriesController@postCreate',
-        'as' => 'categories.create'
+        'as' => 'categories.createDepartment'
     ])->middleware('auth');
 
     Route::get('update/{id}', [

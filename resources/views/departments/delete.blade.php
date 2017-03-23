@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <p class="alert alert-info">You are deleting the following department.
+            <p class="alert alert-info">You are deleting the following category.
                 <br>If you are sure, click Delete button.
                 <br>Otherwise, click Cancel button.
             </p>
@@ -12,19 +12,19 @@
 
     <div class="row">
         <div class="col-md-12">
-            <form action="{{ route('departments.deleteDepartment') }}" method="post">
+            <form action="{{ route('categories.deleteDepartment') }}" method="post">
                 <div class="form-group">
                     <label for="name" class="col-md-2">Name</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" id="name" name="name" 
-                            value="{{ $department->name }}" enabled="false">
+                            value="{{ $department->name }}" disabled>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="description" class="col-md-2">Description</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" id="description" name="description"
-                            value="{{ $department->description }}" enabled="false">
+                            value="{{ $department->description }}" disabled>
                     </div>
                 </div>
                 {{ csrf_field() }}
