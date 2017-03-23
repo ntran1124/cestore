@@ -47,7 +47,7 @@
                 {{ csrf_field() }}
                 <input type="hidden" name="id" value="{{ $category->id }}">
                 <div class="col-md-10 col-md-offset-2">
-                    <button type="submit" class="btn btn-primary">Create</button> 
+                    <button type="submit" class="btn btn-primary">Update</button> 
                     <a href="{{ route("categories.index") }}" class="btn btn-primary">Cancel</a>
                 </div>
             </form>

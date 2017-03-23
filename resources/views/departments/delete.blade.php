@@ -12,7 +12,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <form action="{{ route('categories.deleteDepartment') }}" method="post">
+            <form action="{{ route('departments.deleteDepartment') }}" method="post">
                 <div class="form-group">
                     <label for="name" class="col-md-2">Name</label>
                     <div class="col-md-10">
