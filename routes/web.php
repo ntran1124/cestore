@@ -66,3 +66,44 @@ Route::group(['prefix' => 'departments'], function() {
     ])->middleware('auth');
 });
 
+Route::group(['prefix' => 'categories'], function() {
+    Route::get('', [
+        'uses' => 'CategoriesController@getIndex',
+        'as' => 'categories.index'
+    ])->middleware('auth');
+    
+    Route::get('detail/{id}', [
+        'uses' => 'CategoriesController@getDetail',
+        'as' => 'categories.detail'
+    ])->middleware('auth');
+
+    Route::get('create', [
+        'uses' => 'CategoriesController@getCreate',
+        'as' => 'categories.create'
+    ])->middleware('auth');
+
+    Route::post('create', [
+        'uses' => 'CategoriesController@postCreate',
+        'as' => 'categories.create'
+    ])->middleware('auth');
+
+    Route::get('update/{id}', [
+        'uses' => 'CategoriesController@getUpdate',
+        'as' => 'categories.update'
+    ])->middleware('auth');
+
+    Route::post('update', [
+        'uses' => 'CategoriesController@postUpdate',
+        'as' => 'categories.updateCategory'
+    ])->middleware('auth');
+
+    Route::get('delete/{id}', [
+        'uses' => 'CategoriesController@getDelete',
+        'as' => 'categories.delete'
+    ])->middleware('auth');
+
+    Route::post('delete', [
+        'uses' => 'CategoriesController@postDelete',
+        'as' => 'categories.deleteCategory'
+    ])->middleware('auth');
+});
