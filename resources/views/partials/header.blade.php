@@ -11,6 +11,7 @@
         @endif
         <li><a href="{{ route('departments.index') }}">Department management</a></li>
         <li><a href="{{ route('categories.index') }}">Category management</a></li>
+        <li><a href="{{ route('items.index') }}">Item management</a></li>
       </ul>     
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

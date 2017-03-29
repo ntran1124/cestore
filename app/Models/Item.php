@@ -5,13 +5,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['category_id', 'manufacturer', 'code', 'name', 'description'];
 
-    public function setNameAttribute($value) {
-        $this->attributes['name'] = strtolower($value);
+    public function Category() {
+        return $this->belongsTo('App\Models\Category', 'category_id');
     }
 
-    public function getNameAttribute($value) {
-        return strtoupper($value);
+    public function Manufacturer() {
+        return $this->belongsTo('App\Models\Manufacturer', 'manufacturer_id');
     }
 }

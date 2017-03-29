@@ -13,8 +13,8 @@ class CategoriesController extends Controller {
     }
 
     public function getDetail($id) {
-        //return "I'm here";
-        $category = Category::find(1);
+        $category = Category::find($id);
+        
         return view('categories.detail', ['category' => $category]);
     }
 
@@ -29,7 +29,9 @@ class CategoriesController extends Controller {
             'code' => 'required|min:2',
             'description' => 'required|min:1'
         ]);
+        
         $category = new Category();
+        
         $category->department_id = $request->input('department_id');
         $category->name = $request->input('name');
         $category->code = $request->input('code');
@@ -44,6 +46,7 @@ class CategoriesController extends Controller {
 
     public function getUpdate($id) {
         $category = Category::find($id);
+        
         $departments = Department::all();
         return view('categories.update', [
             'category' => $category,
@@ -68,6 +71,7 @@ class CategoriesController extends Controller {
 
     public function getDelete($id) {
         $category = Category::find($id);
+        
         return view('categories.delete', [
             'category' => $category
         ]);

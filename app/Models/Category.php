@@ -14,4 +14,8 @@ class Category extends Model
     public function Department() {
         return $this->belongsTo('App\Models\Department', 'department_id');
     }
+
+    public function Items() {
+        return $this->hasMany('App\Models\Item');
+    }
 }
